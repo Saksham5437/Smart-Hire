@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+@import "tailwindcss";
+
+:root {
+  font-family: "Geist", system-ui, sans-serif;
+  color: #111111;
+  background: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+/* Clickable elements */
+button,
+a {
+  cursor: pointer;
+}
+
+/* Scroll Reveal Animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 700ms ease,
+    transform 700ms ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+nav {
+  background-color: #ffffff !important;
+  opacity: 1 !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Feature card stagger */
+#features .reveal:nth-child(1) {
+  transition-delay: 0ms;
+}
+
+#features .reveal:nth-child(2) {
+  transition-delay: 100ms;
+}
+
+#features .reveal:nth-child(3) {
+  transition-delay: 200ms;
+}
+
+#features .reveal:nth-child(4) {
+  transition-delay: 300ms;
+}
